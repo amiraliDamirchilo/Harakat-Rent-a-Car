@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Harakat Rent a Car | Abu Dhabi</title>
+<meta name="description" content="Harakat Rent a Car, Al Zahiyah, Abu Dhabi. Economy to luxury cars on daily, weekly and monthly contracts. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Concept: "Harakat" means movement. Night corniche road: deep asphalt, sodium-orange road lines, and a key you can actually press. */
+:root{--night:#0D1117;--asph:#161C25;--line:rgba(255,255,255,.1);--amber:#FF9F1C;--sand:#F3E6CF;--txt:#E9EDF2;--mute:#8C97A6;--display:'Unbounded',system-ui,sans-serif;--body:'Manrope',system-ui,sans-serif;--ease:cubic-bezier(.2,.8,.2,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--night);color:var(--txt);font-family:var(--body);font-size:17px;line-height:1.6;overflow-x:hidden}
+a{color:inherit}p{max-width:58ch}
+.wrap{max-width:1220px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:1;letter-spacing:-.03em;text-wrap:balance}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 24px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;font-family:var(--body);transition:transform .25s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px}
+.btn-a{background:var(--amber);color:#111}
+.btn-o{box-shadow:inset 0 0 0 2px rgba(255,255,255,.3);color:#fff}
+.nav{position:sticky;top:0;z-index:30;background:rgba(13,17,23,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-block:14px;gap:16px}
+.logo{font-family:var(--display);font-weight:800;font-size:20px;text-decoration:none;letter-spacing:-.02em}
+.logo span{color:var(--amber)}
+.menu{display:flex;gap:26px;font-size:15px}.menu a{text-decoration:none;color:var(--mute)}.menu a:hover{color:#fff}
+.nav .btn{padding:11px 18px;font-size:14px}
+.hero{position:relative;overflow:hidden;background:radial-gradient(70% 60% at 75% 40%,rgba(255,159,28,.18),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:center;padding-block:clamp(50px,7vw,100px)}
+.hero-copy{min-width:0}
+.kick{display:inline-flex;gap:10px;align-items:center;font-size:14px;font-weight:700;color:var(--amber);letter-spacing:.08em;text-transform:uppercase}
+.hero h1{font-size:clamp(44px,6.4vw,92px);margin:20px 0}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero .lead{font-size:clamp(17px,1.5vw,20px);color:var(--mute);margin-bottom:30px;max-width:40ch}
+.ctas{display:flex;gap:12px;flex-wrap:wrap}
+.stats{display:flex;gap:34px;margin-top:40px;flex-wrap:wrap}
+.stats b{font-family:var(--display);font-size:34px;display:block;line-height:1}
+.stats span{font-size:14px;color:var(--mute)}
+.stage{position:relative;aspect-ratio:1/1;min-width:0}
+#key{position:absolute;inset:0;width:100%;height:100%;cursor:pointer}
+.stage .hint{position:absolute;bottom:6%;left:50%;transform:translateX(-50%);font-size:14px;color:var(--mute);white-space:nowrap}
+.road{height:6px;background:repeating-linear-gradient(90deg,var(--amber) 0 60px,transparent 60px 120px);animation:drive 1.6s linear infinite;opacity:.8}
+@keyframes drive{to{background-position:-120px 0}}
+section{padding-block:clamp(70px,9vw,120px)}
+.h2r{display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,60px);align-items:end;margin-bottom:clamp(30px,4vw,50px)}
+.h2r h2{font-size:clamp(34px,4.6vw,62px)}.h2r p{color:var(--mute)}
+.fleet{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.car{background:var(--asph);border:1px solid var(--line);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:10px;text-decoration:none;min-width:0;transition:border-color .3s,transform .3s var(--ease)}
+.car:hover{border-color:var(--amber);transform:translateY(-4px)}
+.car .tag{font-size:13px;font-weight:700;color:var(--amber);text-transform:uppercase;letter-spacing:.08em}
+.car h3{font-size:28px}.car p{color:var(--mute);font-size:16px}
+.car .go{margin-top:auto;font-weight:700}
+.plans{background:var(--sand);color:#1A1712}
+.plans .h2r p{color:#5E5546}
+.pl{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.p{border:2px solid #1A1712;border-radius:24px;padding:30px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.p.hot{background:#1A1712;color:var(--sand)}
+.p b{font-family:var(--display);font-size:clamp(40px,4vw,56px);line-height:1}
+.p h3{font-size:22px}.p p{font-size:16px;opacity:.8}
+.p .btn{margin-top:auto;align-self:flex-start}
+.p.hot .btn{background:var(--amber);color:#111}.p:not(.hot) .btn{background:#1A1712;color:var(--sand)}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;counter-reset:s}
+.st{border-top:2px solid var(--amber);padding-top:20px;min-width:0}
+.st::before{counter-increment:s;content:"0" counter(s);font-family:var(--display);color:var(--amber);font-size:15px}
+.st h3{font-size:24px;margin:10px 0 8px}.st p{color:var(--mute);font-size:16px}
+.proof .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(30px,5vw,70px);align-items:center}
+.proof .big{font-family:var(--display);font-size:clamp(100px,13vw,170px);line-height:.85;color:var(--amber)}
+.proof h2{font-size:clamp(30px,3.6vw,48px);margin-bottom:16px}.proof p{color:var(--mute)}
+.ticks{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.ticks span{background:var(--asph);border:1px solid var(--line);border-radius:14px;padding:12px 16px;font-weight:600;font-size:15px}
+.book{background:var(--asph)}
+.book .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,80px);align-items:start}
+.book h2{font-size:clamp(34px,4.6vw,62px);margin-bottom:20px}
+.r{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.r span{color:var(--amber);font-weight:700}
+form{background:var(--night);border:1px solid var(--line);border-radius:24px;padding:clamp(22px,4vw,36px);display:grid;grid-template-columns:1fr 1fr;gap:12px;min-width:0}
+form h3{grid-column:1/-1;font-size:26px;margin-bottom:6px}
+label{display:grid;gap:6px;font-size:14px;color:var(--mute);font-weight:600}
+input,select{font:inherit;font-size:16px;padding:13px 14px;border-radius:12px;border:1px solid var(--line);background:var(--asph);color:#fff;width:100%}
+input:focus,select:focus{outline:none;border-color:var(--amber)}
+form .btn{grid-column:1/-1;justify-content:center}
+footer{border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;padding-block:24px}
+.dock{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;transform:translateY(160%);transition:transform .5s var(--ease)}
+.dock.show{transform:none}
+@media (max-width:980px){.menu{display:none}.hero .wrap,.h2r,.proof .wrap,.book .wrap{grid-template-columns:1fr}.stage{max-width:460px;width:100%;margin:0 auto}.fleet,.pl,.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.fleet,.pl,.steps,form,.ticks{grid-template-columns:1fr}.r{grid-template-columns:1fr;gap:2px}.nav .btn span{display:none}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4C2.7 15.6 2.2 13.8 2.2 12 2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9 1.8 1.8 2.9 4.3 2.9 6.9 0 5.4-4.4 9.8-9.8 9.8zm8.4-18.2C18.1 1.3 15.2 0 12 0 5.5 0 .1 5.3.1 11.9c0 2.1.5 4.1 1.6 5.9L0 24l6.3-1.7c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.5-8.4z"/></symbol></svg>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" href="#top">HARAKAT<span>.</span></a>
+  <nav class="menu" aria-label="Main"><a href="#fleet">Fleet</a><a href="#plans">Plans</a><a href="#how">How it works</a><a href="#book">Book</a></nav>
+  <a class="btn btn-a wa" data-msg="Hello Harakat, I'd like to rent a car." href="#"><svg><use href="#wa"/></svg><span>Book on WhatsApp</span></a>
+</div></header>
+
+<main id="top">
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="kick">Al Zahiyah · Abu Dhabi</span>
+      <h1>Your keys are <em>ready</em>. Where to?</h1>
+      <p class="lead">Economy to luxury, by the day, week or month. Message us the car and the dates, and we'll handle the rest.</p>
+      <div class="ctas">
+        <a class="btn btn-a wa" data-msg="Hello Harakat, I'd like to check availability for a car." href="#"><svg><use href="#wa"/></svg>Check availability</a>
+        <a class="btn btn-o" href="#fleet">See the fleet</a>
+      </div>
+      <div class="stats"><div><b>4.9★</b><span>Customer rating</span></div><div><b>Day · Week · Month</b><span>Flexible contracts</span></div></div>
+    </div>
+    <div class="stage"><canvas id="key" aria-label="A 3D car key. Tap to unlock."></canvas><span class="hint">Tap the key to unlock</span></div>
+  </div>
+  <div class="road" aria-hidden="true"></div>
+</section>
+
+<section id="fleet">
+  <div class="wrap">
+    <div class="h2r"><h2>Pick the car for the trip.</h2><p>A city run, a family weekend in Al Ain, or a client meeting that needs to look right. There's a car for each.</p></div>
+    <div class="fleet">
+      <a class="car wa" data-msg="Hello Harakat, I'd like an economy car." href="#"><span class="tag">Economy</span><h3>Easy on fuel. Easy to park.</h3><p>Compact sedans and hatchbacks for everyday driving around the city.</p><span class="go">Ask for a price →</span></a>
+      <a class="car wa" data-msg="Hello Harakat, I'd like an SUV." href="#"><span class="tag">SUV &amp; family</span><h3>Room for everyone.</h3><p>Space for the kids, the bags and the long road to Liwa.</p><span class="go">Ask for a price →</span></a>
+      <a class="car wa" data-msg="Hello Harakat, I'd like a luxury car." href="#"><span class="tag">Luxury</span><h3>Arrive like you mean it.</h3><p>Premium cars for weddings, business and the weekend you've earned.</p><span class="go">Ask for a price →</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="plans" id="plans">
+  <div class="wrap">
+    <div class="h2r"><h2>Rent for as long as you need.</h2><p>The longer you keep it, the better the rate. Tell us your dates and we'll quote you straight away.</p></div>
+    <div class="pl">
+      <div class="p"><h3>Daily</h3><b>1 day+</b><p>Visitors, short trips, or when your own car is in the garage.</p><a class="btn wa" data-msg="Hello Harakat, I'd like a daily rental quote." href="#">Get daily rate</a></div>
+      <div class="p hot"><h3>Monthly</h3><b>30 days+</b><p>The smart choice for new arrivals and residents. One price, no car loan.</p><a class="btn wa" data-msg="Hello Harakat, I'd like a monthly rental quote." href="#">Get monthly rate</a></div>
+      <div class="p"><h3>Weekly</h3><b>7 days+</b><p>A full week of freedom, priced lower than seven single days.</p><a class="btn wa" data-msg="Hello Harakat, I'd like a weekly rental quote." href="#">Get weekly rate</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="h2r"><h2>Three messages to the road.</h2><p>No long forms, no waiting at a counter.</p></div>
+    <div class="steps">
+      <div class="st"><h3>Tell us the car</h3><p>Send the type of car and your dates on WhatsApp.</p></div>
+      <div class="st"><h3>Get your quote</h3><p>We reply with availability and a clear price.</p></div>
+      <div class="st"><h3>Take the keys</h3><p>Bring your documents, sign and drive.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <div class="big">4.9</div>
+    <div>
+      <h2>Rated by thousands of drivers.</h2>
+      <p>Harakat serves individuals and companies across Abu Dhabi, from one-day rentals to company fleets on monthly contracts.</p>
+      <div class="ticks"><span>✓ Individuals &amp; corporate</span><span>✓ Economy to luxury</span><span>✓ Daily, weekly, monthly</span><span>✓ Accessible office</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div>
+      <h2>Book your car.</h2>
+      <div class="r"><span>Office</span><div>Sheikh Zayed Bin Sultan St, Al Zahiyah, Abu Dhabi</div></div>
+      <div class="r"><span>Phone</span><div><a href="tel:+971508105080">050 810 5080</a></div></div>
+      <div class="r"><span>Corporate</span><div>Ask about company fleet contracts</div></div>
+      <a class="btn btn-o" style="margin-top:24px" href="https://www.google.com/maps/search/?api=1&query=Harakat+Rent+a+Car+Abu+Dhabi" target="_blank" rel="noopener">Get directions</a>
+    </div>
+    <form id="bk">
+      <h3>Quick quote</h3>
+      <label for="bC">Car type<select id="bC"><option>Economy</option><option>SUV / family</option><option>Luxury</option></select></label>
+      <label for="bP">Plan<select id="bP"><option>Daily</option><option>Weekly</option><option>Monthly</option></select></label>
+      <label for="bD">Pick-up date<input id="bD" type="date"></label>
+      <label for="bN">Your name<input id="bN" type="text" autocomplete="name"></label>
+      <button class="btn btn-a" type="submit"><svg><use href="#wa"/></svg>Send on WhatsApp</button>
+    </form>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><span>© 2026 Harakat Rent a Car · Abu Dhabi</span><span>Economy · SUV · Luxury</span></div></footer>
+<div class="dock" id="dock"><a class="btn btn-a wa" data-msg="Hello Harakat, I'd like to rent a car." href="#"><svg><use href="#wa"/></svg>Book a car</a></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+  var PHONE='971508105080';
+  function url(m){return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(m)}
+  document.querySelectorAll('.wa').forEach(function(a){a.href=url(a.dataset.msg);a.target='_blank';a.rel='noopener'});
+  var dock=document.getElementById('dock');addEventListener('scroll',function(){dock.classList.toggle('show',scrollY>innerHeight*.8)},{passive:true});
+  var d=document.getElementById('bD');d.value=new Date().toISOString().slice(0,10);d.min=d.value;
+  document.getElementById('bk').addEventListener('submit',function(e){e.preventDefault();var v=function(i){return document.getElementById(i).value||'-'};
+    window.open(url('Hello Harakat, I\'d like a quote.\nCar: '+v('bC')+'\nPlan: '+v('bP')+'\nPick-up: '+v('bD')+'\nName: '+v('bN')),'_blank','noopener')});
+
+  if(!window.THREE)return;
+  var canvas=document.getElementById('key'),stage=canvas.parentElement;
+  try{
+    var R=new THREE.WebGLRenderer({canvas:canvas,antialias:true,alpha:true});
+    R.setPixelRatio(Math.min(devicePixelRatio,2));R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;
+    var S=new THREE.Scene(),C=new THREE.PerspectiveCamera(30,1,.1,100);C.position.set(0,0,11);
+    function col(h){return new THREE.Color(h).convertSRGBToLinear()}
+    var env=new THREE.Scene();env.add(new THREE.Mesh(new THREE.BoxGeometry(30,30,30),new THREE.MeshBasicMaterial({color:col(0x10151d),side:THREE.BackSide})));
+    function panel(w,h,x,y,z,c,i){var m=new THREE.Mesh(new THREE.PlaneGeometry(w,h),new THREE.MeshBasicMaterial({color:col(c).multiplyScalar(i),side:THREE.DoubleSide}));m.position.set(x,y,z);m.lookAt(0,0,0);env.add(m)}
+    panel(12,2,0,8,4,0xffffff,2);panel(2,10,-9,0,3,0xFF9F1C,2.2);panel(2,10,9,0,3,0xffffff,1.2);
+    var pm=new THREE.PMREMGenerator(R);S.environment=pm.fromScene(env,.03).texture;
+    S.add(new THREE.AmbientLight(0xffffff,.2));
+    var body=new THREE.MeshPhysicalMaterial({color:col(0x14181f),roughness:.25,metalness:.2,clearcoat:1,clearcoatRoughness:.1});
+    var chrome=new THREE.MeshPhysicalMaterial({color:col(0xdfe3e8),roughness:.12,metalness:1});
+    var btnM=new THREE.MeshStandardMaterial({color:col(0x2a313c),roughness:.6});
+    var key=new THREE.Group();S.add(key);
+    // fob body: rounded shape extruded
+    var sh=new THREE.Shape(),w=1.1,h=1.9,r=.5;
+    sh.moveTo(-w+r,-h);sh.lineTo(w-r,-h);sh.quadraticCurveTo(w,-h,w,-h+r);sh.lineTo(w,h-r);sh.quadraticCurveTo(w,h,w-r,h);sh.lineTo(-w+r,h);sh.quadraticCurveTo(-w,h,-w,h-r);sh.lineTo(-w,-h+r);sh.quadraticCurveTo(-w,-h,-w+r,-h);
+    var fob=new THREE.Mesh(new THREE.ExtrudeGeometry(sh,{depth:.5,bevelEnabled:true,bevelSize:.12,bevelThickness:.12,bevelSegments:6,curveSegments:24}),body);fob.position.z=-.25;key.add(fob);
+    var rim=new THREE.Mesh(new THREE.TorusGeometry(.32,.07,16,40),chrome);rim.position.set(0,h+.25,0);key.add(rim);
+    var ring=new THREE.Mesh(new THREE.TorusGeometry(.9,.06,16,64),chrome);ring.position.set(0,h+1.15,0);ring.rotation.y=Math.PI/2.3;key.add(ring);
+    var btns=[];[[.95,'lock'],[.05,'unlock'],[-.85,'trunk']].forEach(function(b,i){var m=new THREE.Mesh(new THREE.CylinderGeometry(.42,.42,.14,40),btnM.clone());m.rotation.x=Math.PI/2;m.position.set(0,b[0],.42);key.add(m);btns.push(m)});
+    var glow=new THREE.MeshBasicMaterial({color:col(0xFF9F1C)});
+    var led=new THREE.Mesh(new THREE.SphereGeometry(.07,16,12),glow);led.position.set(0,1.62,.42);key.add(led);
+    var light=new THREE.PointLight(col(0xFF9F1C),0,6);light.position.set(0,0,2);key.add(light);
+    key.scale.setScalar(.9);key.position.y=-.5;
+    function size(){var cw=canvas.clientWidth,ch=canvas.clientHeight;if(!cw)return;R.setSize(cw,ch,false);C.aspect=cw/ch;C.updateProjectionMatrix()}
+    size();addEventListener('resize',size);
+    var mx=0,my=0,press=0,flash=0;
+    addEventListener('pointermove',function(e){mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5});
+    canvas.addEventListener('click',function(){press=1;flash=1});
+    var visible=true,reduce=matchMedia('(prefers-reduced-motion: reduce)').matches,t0=performance.now();
+    new IntersectionObserver(function(es){visible=es[0].isIntersecting}).observe(stage);
+    (function loop(t){requestAnimationFrame(loop);if(!visible)return;var tt=(t-t0)/1000;
+      press*=.88;flash*=.95;btns[1].position.z=.42-press*.1;btns[1].material.color.copy(col(0x2a313c)).lerp(col(0xFF9F1C),flash);
+      light.intensity=flash*3;led.visible=(flash>.05)?(Math.floor(tt*10)%2===0):true;
+      key.rotation.y=(reduce?0:Math.sin(tt*.6)*.5)+mx*.8;key.rotation.x=-.15+my*.4;key.rotation.z=.12;
+      ring.rotation.x=reduce?0:Math.sin(tt*1.5)*.3;key.position.y=-.5+(reduce?0:Math.sin(tt*1.1)*.1);R.render(S,C)})(t0);
+  }catch(err){console.warn(err)}
+})();
+</script>
+</body>
+</html>
